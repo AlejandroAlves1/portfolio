@@ -1,0 +1,196 @@
+/* Estilo do header */
+#mainHeader {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 60px; /* Largura inicial do menu reduzida */
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Z-index alto para o header */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Adiciona barra de rolagem vertical, se necessário */
+    display: none; /* Inicia oculto */
+    transition: width 0.3s ease; /* Transição suave da largura */
+}
+
+#mainHeader.show {
+    display: block; /* Exibe quando a classe .show é adicionada */
+    width: 200px; /* Largura expandida do menu */
+}
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #about {
+    top: 20px;
+    background-color: #04AA6D;
+  }
+/* Estilo do botão */
+#toggleHeaderBtn {
+    background-color: #4CAF50; /* Cor de fundo padrão */
+    color: #fff; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px; /* Borda arredondada */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave da cor de fundo */
+    position: absolute; /* Posicionamento absoluto em relação ao viewport */
+    top: 70px; /* Distância do topo */
+    left: 0px; /* Distância da esquerda */
+    z-index: 1100; /* Z-index maior que o do header para sobreposição */
+}
+
+/* Estilo do botão quando hover */
+#toggleHeaderBtn:hover {
+    background-color: #45A049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Animação usando keyframes */
+@keyframes pulseAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Aplicando a animação ao botão */
+#toggleHeaderBtn {
+    animation: pulseAnimation 2s infinite; /* Aplica a animação com duração de 2 segundos e infinita */
+}
+#mainHeader.show {
+    display: block; /* Exibe quando a classe .show é adicionada */
+    width: 200px; /* Largura expandida do menu */
+}
+
+header h1 {
+    font-size: 1.3em;
+    margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+
+header nav {
+    margin-top: 20px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-bottom: 10px;
+}
+
+header nav ul li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Estilo das seções */
+section {
+    padding: 60px 0;
+    transition: margin-left 0.3s ease; /* Transição suave da margem esquerda */
+    text-align: center; /* Centraliza conteúdo nas seções */
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+/* Media query para telas menores */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 1.8em; /* Reduz tamanho da fonte do título da seção */
+    }
+
+    section p {
+        font-size: 0.9em; /* Reduz tamanho da fonte do texto da seção */
+        padding: 0 15px; /* Adiciona espaçamento ao redor do texto */
+    }
+
+    .container {
+        width: 100%; /* Largura total em telas menores */
+    }
+}
+
+section h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+section p {
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.project {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.project p {
+    color: #666;
+}
+
+.project a {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #45A049;
+}
